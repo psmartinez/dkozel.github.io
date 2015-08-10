@@ -4,7 +4,7 @@
   <title><![CDATA[Derek Kozel]]></title>
   <link href="http://dkozel.github.io/atom.xml" rel="self"/>
   <link href="http://dkozel.github.io/"/>
-  <updated>2015-08-10T05:28:00-07:00</updated>
+  <updated>2015-08-10T05:28:55-07:00</updated>
   <id>http://dkozel.github.io/</id>
   <author>
     <name><![CDATA[Derek Kozel]]></name>
@@ -32,20 +32,11 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Using an Openpgp Card]]></title>
+    <title type="html"><![CDATA[Using an OpenPGP Card]]></title>
     <link href="http://dkozel.github.io/blog/using-an-openpgp-card/"/>
-    <updated>2014-12-26T00:00:00-08:00</updated>
+    <updated>2014-12-26T09:21:52-08:00</updated>
     <id>http://dkozel.github.io/blog/using-an-openpgp-card</id>
-    <content type="html"><![CDATA[
-<hr />
-<p>layout: post
-title: “Using an OpenPGP Card”
-date: 2014-12-26 18:21:52 +0100
-comments: true
-categories: 
-—</p>
-
-<p>I bought an <a href="http://g10code.com/p-card.html">OpenPGP card</a> earlier this year and created a new GPG key (<a href="http://www.derekkozel.com/2642D337.asc">2642D337</a>) during IETF 89. I’ve been using that key to sign git commits, ssh, and sign/encrypt significant emails and files. However I locked the card on purpose while experimenting with it and then encountered problems unlocking and reloading it. Since then the card has been taking up space in my wallet. Yesterday I was lounging and decided to look at my GPG setup and get the card working.</p>
+    <content type="html"><![CDATA[<p>I bought an <a href="http://g10code.com/p-card.html">OpenPGP card</a> earlier this year and created a new GPG key (<a href="http://www.derekkozel.com/2642D337.asc">2642D337</a>) during IETF 89. I’ve been using that key to sign git commits, ssh, and sign/encrypt significant emails and files. However I locked the card on purpose while experimenting with it and then encountered problems unlocking and reloading it. Since then the card has been taking up space in my wallet. Yesterday I was lounging and decided to look at my GPG setup and get the card working.</p>
 
 <!-- more -->
 
