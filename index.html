@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Contemplating Code</title>
+  <title>Derek Kozel</title>
   <meta name="author" content="Derek Kozel">
 
   
@@ -22,7 +22,7 @@
   <link rel="canonical" href="http://dkozel.github.io/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Contemplating Code" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Derek Kozel" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
@@ -55,9 +55,9 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">Contemplating Code</a></h1>
+  <h1><a href="/">Derek Kozel</a></h1>
   
-    <h2>Random Walks in Knowledge Spaces</h2>
+    <h2>Bits to Volts</h2>
   
 </hgroup>
 
@@ -156,6 +156,43 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/using-an-openpgp-card/">Using an Openpgp Card</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-12-26T00:00:00-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
+        
+           | <a href="/blog/using-an-openpgp-card/#disqus_thread"
+             data-disqus-identifier="http://dkozel.github.io/blog/using-an-openpgp-card/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I bought an <a href="http://g10code.com/p-card.html">OpenPGP card</a> earlier this year and created a new GPG key (<a href="http://www.derekkozel.com/2642D337.asc">2642D337</a>) during IETF 89. I’ve been using that key to sign git commits, ssh, and sign/encrypt significant emails and files. However I locked the card on purpose while experimenting with it and then encountered problems unlocking and reloading it. Since then the card has been taking up space in my wallet. Yesterday I was lounging and decided to look at my GPG setup and get the card working.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/using-an-openpgp-card/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/latex-in-octopress/">Latex in Octopress</a></h1>
     
     
@@ -175,53 +212,13 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   </header>
 
 
-  <div class="entry-content"><p>Many of the topics I work with involve math left, right, and center. Being able to use <script type="math/tex">\LaTeX</script> is a big feature for me so here’s the solution I’ve come up with so far. Credit certainly goes to  <a href="http://drz.ac/2013/01/03/blogging-with-math/">Dr Zac</a> and <a href="http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/">Felix</a> for their work getting Latex playing nice. I believe that Zac’s is the more correct solution given its use of the custom header file rather than modifying the default layout. However Felix has the fix for a bug in MathJax which otherwise turns the entire page white when viewing an equation’s source.</p>
-
-<p>The first step is to change the Markdown processor to be kramdown (or pandoc if you prefer, see Dr Zac’s page) as it supports Latex.</p>
-
-<ul>
-  <li>In <code>Gemfile</code> replace <code>rdiscount</code> with <code>kramdown</code> and remove the version requirement.</li>
-  <li>In <code>_config.yml</code> replace <code>rdiscount</code> with <code>kramdown</code> as the markdown parser</li>
-  <li>Run <code>bundle install</code> to install Kramdown if necessary.</li>
-</ul>
-
-<p>Now add the <a href="http://www.mathjax.org/">MathJax</a> script to each page’s header</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>source/_includes/custom/head.html</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">&lt;!--- MathJax Configuration --&gt;
-</span><span class="line">&lt;script type="text/javascript"
-</span><span class="line">src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;
-</span><span class="line">&lt;/script&gt;</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>Finally fix the MathJax right click bug if necessary. I’m using the <a href="https://github.com/vladigleba/readify">readify</a> theme which doesn’t trigger the bug, however the default theme does.</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>sass/base/_theme.scss</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="sass"><span class="line"><span class="nt">body</span> <span class="err">{</span>
-</span><span class="line">  <span class="o">&gt;</span> <span class="nt">div</span> <span class="err">{</span>
-</span><span class="line">    <span class="na">background</span><span class="o">:</span> <span class="nv">$sidebar-bg</span> <span class="nv">$noise-bg</span><span class="err">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>needs to be changed to</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="sass"><span class="line"><span class="nt">body</span> <span class="err">{</span>
-</span><span class="line">  <span class="o">&gt;</span> <span class="nt">div</span><span class="nn">#main</span> <span class="err">{</span>
-</span><span class="line">    <span class="na">background</span><span class="o">:</span> <span class="nv">$sidebar-bg</span> <span class="nv">$noise-bg</span><span class="err">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>And the result, an attractive Fourier Transform equation</p>
-
-<script type="math/tex; mode=display">F(\omega) = \int_{-\infty}^\infty f(t) e^{-i \omega t} dt.</script>
-
+  <div class="entry-content"><p>Many of the topics I work with involve math left, right, and center. Being able to use <script type="math/tex">\LaTeX</script> is a big feature for me so here’s the solution I’ve come up with so far. Credit certainly goes to  <a href="http://drz.ac/2013/01/03/blogging-with-math/">Dr Zac</a> and <a href="http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/">Felix</a> for their work getting Latex playing nice. I believe that Zac’s is the more correct solution given its use of the custom header file rather than modifying the default layout. However Felix has the fix for a bug in MathJax which otherwise turns the entire page white when viewing an equation’s source.
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/latex-in-octopress/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -251,15 +248,13 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   </header>
 
 
-  <div class="entry-content"><p>Most engineers, and probably most people in general, will be familiar with how projects and tasks accumulate. Finishing university and moving three times in two months has pushed my todo list past the end of the page. I sat down today and wrote down everything I could think of that I wished, or was obliged, to accomplish in the next month and have to admit that some (many) of the project ideas that float through my head simply aren’t going to get done.</p>
-
-<p>I already did a cull of the project list in May when I was packing to move out of my apartment in Mountain View. I’m happy to say that my workbench did see a lot of use over the last year and that many projects did get finished. However almost an equal number stalled out for lack of a part, a gap in my knowledge which turned into a rabbit hole spawning new projects, or simply because there are only so many hours in a day. So nearly all of the physical items attached to zombie projects were given away or recycled. Now the time has come to reap the list again and start fresh (mostly).</p>
-
-<p>I’m declaring Project Bankruptcy, inspired by <a href="http://en.wikipedia.org/wiki/Email_bankruptcy">Email Bankruptcy</a>. Unless I have made an explicit commitment to complete a task or have a continuing duty to support a system, its all being dropped. Some of the dropped projects will bounce right back onto my list because of their immediate relevance (such as figuring out the dynamic dns settings of our new router) and that’s fine. But so many of these projects and tasks are no longer (or never were) important and are just mental cruft.</p>
-
-<p>One of the few visible changes as a result of this will be the clearing out of past, partially completed posts on this blog and the removal of a number of public repositories that aren’t relevant to anyone. Sorry if anyone misses something.</p>
+  <div class="entry-content"><p>Most engineers, and probably most people in general, will be familiar with how projects and tasks accumulate. Finishing university and moving three times in two months has pushed my todo list past the end of the page. I sat down today and wrote down everything I could think of that I wished, or was obliged, to accomplish in the next month and have to admit that some (many) of the project ideas that float through my head simply aren’t going to get done.
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/project-bankruptcy/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -283,6 +278,10 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     
       <li class="post">
         <a href="/blog/pelco-pan-tilt-head/">Pelco Pan Tilt Head</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/using-an-openpgp-card/">Using an Openpgp Card</a>
       </li>
     
       <li class="post">
