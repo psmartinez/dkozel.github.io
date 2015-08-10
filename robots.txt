@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://www.derekkozel.com/sitemap.xml 
+Sitemap: http://dkozel.github.io/sitemap.xml 

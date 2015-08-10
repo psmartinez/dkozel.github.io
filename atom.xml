@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Contemplating Code]]></title>
-  <link href="http://www.derekkozel.com/atom.xml" rel="self"/>
-  <link href="http://www.derekkozel.com/"/>
-  <updated>2015-08-10T03:36:28-07:00</updated>
-  <id>http://www.derekkozel.com/</id>
+  <link href="http://dkozel.github.io/atom.xml" rel="self"/>
+  <link href="http://dkozel.github.io/"/>
+  <updated>2015-08-10T03:41:19-07:00</updated>
+  <id>http://dkozel.github.io/</id>
   <author>
     <name><![CDATA[Derek Kozel]]></name>
     
@@ -15,27 +15,27 @@
   
   <entry>
     <title type="html"><![CDATA[Basic Quadcopter Build]]></title>
-    <link href="http://www.derekkozel.com/blog/basic-quadcopter-build/"/>
+    <link href="http://dkozel.github.io/blog/basic-quadcopter-build/"/>
     <updated>2015-08-05T06:19:21-07:00</updated>
-    <id>http://www.derekkozel.com/blog/basic-quadcopter-build</id>
+    <id>http://dkozel.github.io/blog/basic-quadcopter-build</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Pelco Pan Tilt Head]]></title>
-    <link href="http://www.derekkozel.com/blog/pelco-pan-tilt-head/"/>
+    <link href="http://dkozel.github.io/blog/pelco-pan-tilt-head/"/>
     <updated>2015-08-05T06:18:48-07:00</updated>
-    <id>http://www.derekkozel.com/blog/pelco-pan-tilt-head</id>
+    <id>http://dkozel.github.io/blog/pelco-pan-tilt-head</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Latex in Octopress]]></title>
-    <link href="http://www.derekkozel.com/blog/latex-in-octopress/"/>
+    <link href="http://dkozel.github.io/blog/latex-in-octopress/"/>
     <updated>2014-07-08T18:21:23-07:00</updated>
-    <id>http://www.derekkozel.com/blog/latex-in-octopress</id>
+    <id>http://dkozel.github.io/blog/latex-in-octopress</id>
     <content type="html"><![CDATA[<p>Many of the topics I work with involve math left, right, and center. Being able to use <script type="math/tex">\LaTeX</script> is a big feature for me so here’s the solution I’ve come up with so far. Credit certainly goes to  <a href="http://drz.ac/2013/01/03/blogging-with-math/">Dr Zac</a> and <a href="http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/">Felix</a> for their work getting Latex playing nice. I believe that Zac’s is the more correct solution given its use of the custom header file rather than modifying the default layout. However Felix has the fix for a bug in MathJax which otherwise turns the entire page white when viewing an equation’s source.</p>
 
 <p>The first step is to change the Markdown processor to be kramdown (or pandoc if you prefer, see Dr Zac’s page) as it supports Latex.</p>
@@ -86,9 +86,9 @@
   
   <entry>
     <title type="html"><![CDATA[Project Bankruptcy]]></title>
-    <link href="http://www.derekkozel.com/blog/project-bankruptcy/"/>
+    <link href="http://dkozel.github.io/blog/project-bankruptcy/"/>
     <updated>2014-07-08T17:37:26-07:00</updated>
-    <id>http://www.derekkozel.com/blog/project-bankruptcy</id>
+    <id>http://dkozel.github.io/blog/project-bankruptcy</id>
     <content type="html"><![CDATA[<p>Most engineers, and probably most people in general, will be familiar with how projects and tasks accumulate. Finishing university and moving three times in two months has pushed my todo list past the end of the page. I sat down today and wrote down everything I could think of that I wished, or was obliged, to accomplish in the next month and have to admit that some (many) of the project ideas that float through my head simply aren’t going to get done.</p>
 
 <p>I already did a cull of the project list in May when I was packing to move out of my apartment in Mountain View. I’m happy to say that my workbench did see a lot of use over the last year and that many projects did get finished. However almost an equal number stalled out for lack of a part, a gap in my knowledge which turned into a rabbit hole spawning new projects, or simply because there are only so many hours in a day. So nearly all of the physical items attached to zombie projects were given away or recycled. Now the time has come to reap the list again and start fresh (mostly).</p>

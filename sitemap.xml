@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.derekkozel.com/blog/basic-quadcopter-build/</loc>
+    <loc>http://dkozel.github.io/blog/basic-quadcopter-build/</loc>
     <lastmod>2015-08-05T06:19:21-07:00</lastmod>
   </url>
   <url>
-    <loc>http://www.derekkozel.com/blog/pelco-pan-tilt-head/</loc>
+    <loc>http://dkozel.github.io/blog/pelco-pan-tilt-head/</loc>
     <lastmod>2015-08-05T06:18:48-07:00</lastmod>
   </url>
   <url>
-    <loc>http://www.derekkozel.com/blog/latex-in-octopress/</loc>
+    <loc>http://dkozel.github.io/blog/latex-in-octopress/</loc>
     <lastmod>2014-07-08T18:21:23-07:00</lastmod>
   </url>
   <url>
-    <loc>http://www.derekkozel.com/blog/project-bankruptcy/</loc>
+    <loc>http://dkozel.github.io/blog/project-bankruptcy/</loc>
     <lastmod>2014-07-08T17:37:26-07:00</lastmod>
   </url>
   <url>
-    <loc>http://www.derekkozel.com/blog/archives/</loc>
+    <loc>http://dkozel.github.io/blog/archives/</loc>
   </url>
   <url>
-    <loc>http://www.derekkozel.com/</loc>
+    <loc>http://dkozel.github.io/</loc>
   </url>
 </urlset>
