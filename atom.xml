@@ -4,7 +4,7 @@
   <title><![CDATA[Derek Kozel]]></title>
   <link href="http://dkozel.github.io/atom.xml" rel="self"/>
   <link href="http://dkozel.github.io/"/>
-  <updated>2015-08-13T08:51:42-07:00</updated>
+  <updated>2015-08-13T08:55:04-07:00</updated>
   <id>http://dkozel.github.io/</id>
   <author>
     <name><![CDATA[Derek Kozel]]></name>
@@ -18,7 +18,8 @@
     <link href="http://dkozel.github.io/blog/tunneling-web-traffic-over-ssh/"/>
     <updated>2015-08-13T06:24:25-07:00</updated>
     <id>http://dkozel.github.io/blog/tunneling-web-traffic-over-ssh</id>
-    <content type="html"><![CDATA[<p>At times it is useful to have your web traffic originate from a remote location for testing or access to geofenced resources. During university it was very useful for accessing the library resources. At other times being able to have all traffic encrypted from a laptop to a remote location such as when on an unsecured WiFi network. I’ve used this a good number of times so here is the minimal steps.</p>
+    <content type="html"><![CDATA[<p>At times it is useful to have your web traffic originate from a remote location for testing or access to geofenced resources. During university it was very useful for accessing the library resources. At other times being able to have all traffic encrypted from a laptop to a remote location such as when on an unsecured WiFi network. I’ve used this a good number of times so here is the minimal steps.
+<!-- more --></p>
 
 <div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 </pre></td><td class="code"><pre><code class=""><span class="line">ssh -C2nNqT -D 8080 dkozel@vps.derekkozel.com &amp;</span></code></pre></td></tr></table></div></figure></notextile></div>
@@ -40,7 +41,8 @@
     <link href="http://dkozel.github.io/blog/basic-quadcopter-build/"/>
     <updated>2015-08-05T06:19:21-07:00</updated>
     <id>http://dkozel.github.io/blog/basic-quadcopter-build</id>
-    <content type="html"><![CDATA[<p>A long term desire of mine has been to build a multicopter. Three years ago I tried flying a model powered glider and it went like a stone in a pool. In hindsight a glider is very good at catching any breeze so was a poor choice for a beginner as it was pushed far away before I could get a grip on controlling it. a few trees and almost a window later it was put in a closet then given to Goodwill. A multicopter has a much shorter flight time, but far lower wind load and can be held stationary with little effort even without fancy additions like GPS.</p>
+    <content type="html"><![CDATA[<p>A long term desire of mine has been to build a multicopter. Three years ago I tried flying a model powered glider and it went like a stone in a pool. In hindsight a glider is very good at catching any breeze so was a poor choice for a beginner as it was pushed far away before I could get a grip on controlling it. a few trees and almost a window later it was put in a closet then given to Goodwill. A multicopter has a much shorter flight time, but far lower wind load and can be held stationary with little effort even without fancy additions like GPS.
+<!-- more --></p>
 
 <p>As the previous foray had not gone far I did not want to overinvest in the project so chose to do a small quadcopter with a standard frame and popular components. While I still spent far too long selecting components the core philosophy was, if lots of other people are using it there will be lots of resources to help configure and tune the part and total system. This worked wonderfully.</p>
 
@@ -63,7 +65,8 @@
   <li>Build a SatNOGS style rotator from servos</li>
   <li>Join two single axis satellite dish rotators</li>
   <li>Use a manual pan tilt head such as the Quickset Herculese line</li>
-  <li>Buy a commercial two axis antenna rotator</li>
+  <li>Buy a commercial two axis antenna rotator
+<!-- more --></li>
 </ul>
 
 <p>Each of these was a viable design with examples of working systems easy to find online. However given limited time and money non was a good match for me. Then another option came up, using a pan tilt head for CCTV cameras! These are built for a high duty cycle, heavy loads, remote operation, and long life spans. The trade off is that they are generally expensive, have odd power requirements, and often quite heavy. The control systems also come in a variety of physical styles and protocols. The nicest ones have RS 485 interfaces with well documented protocols.</p>
