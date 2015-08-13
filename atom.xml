@@ -4,7 +4,7 @@
   <title><![CDATA[Derek Kozel]]></title>
   <link href="http://dkozel.github.io/atom.xml" rel="self"/>
   <link href="http://dkozel.github.io/"/>
-  <updated>2015-08-10T07:13:18-07:00</updated>
+  <updated>2015-08-13T08:51:42-07:00</updated>
   <id>http://dkozel.github.io/</id>
   <author>
     <name><![CDATA[Derek Kozel]]></name>
@@ -14,11 +14,41 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Tunneling Web Traffic Over SSH]]></title>
+    <link href="http://dkozel.github.io/blog/tunneling-web-traffic-over-ssh/"/>
+    <updated>2015-08-13T06:24:25-07:00</updated>
+    <id>http://dkozel.github.io/blog/tunneling-web-traffic-over-ssh</id>
+    <content type="html"><![CDATA[<p>At times it is useful to have your web traffic originate from a remote location for testing or access to geofenced resources. During university it was very useful for accessing the library resources. At other times being able to have all traffic encrypted from a laptop to a remote location such as when on an unsecured WiFi network. I’ve used this a good number of times so here is the minimal steps.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">ssh -C2nNqT -D 8080 dkozel@vps.derekkozel.com &amp;</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>These options:
+* Enable compression
+* Force the use of SSH protocol version 2
+* Prevents reading of stdin, useful for running in the background
+* Does not execute a remote command
+* Disables pseudo-tty allocation
+* Quiets ssh messages</p>
+
+<p>Then configure your browser to use a localhost SOCKS proxy at port 8080.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Basic Quadcopter Build]]></title>
     <link href="http://dkozel.github.io/blog/basic-quadcopter-build/"/>
     <updated>2015-08-05T06:19:21-07:00</updated>
     <id>http://dkozel.github.io/blog/basic-quadcopter-build</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>A long term desire of mine has been to build a multicopter. Three years ago I tried flying a model powered glider and it went like a stone in a pool. In hindsight a glider is very good at catching any breeze so was a poor choice for a beginner as it was pushed far away before I could get a grip on controlling it. a few trees and almost a window later it was put in a closet then given to Goodwill. A multicopter has a much shorter flight time, but far lower wind load and can be held stationary with little effort even without fancy additions like GPS.</p>
+
+<p>As the previous foray had not gone far I did not want to overinvest in the project so chose to do a small quadcopter with a standard frame and popular components. While I still spent far too long selecting components the core philosophy was, if lots of other people are using it there will be lots of resources to help configure and tune the part and total system. This worked wonderfully.</p>
+
+<p>Picking the frame, an EMAX 250, narrowed the selection of other components considerably. The maximum propeller size was 6 inches, but that assumes very good wiring and harnessing of the battery, flight controller, and radio so I went with 5 inch ones. This also provides slightly more crash resiliance as the frame protects a higher proportion of the blades without getting too close while spinning. The motor and ESC controller selections stuck to to the popular and simple route, EMAX 1806 2280KV motors with EMAX 20A ESCs. These ESCs are oversized, both in current capacity and physical dimensions, for the frame but will be useful for future larger frames and were minimally more expensive than the 12A ones. The EMAX ESCs run a slightly modified fork of the SimonK firmware. My flight controller will soon have the functionality to alter ESC parameters</p>
+
+<p>The flight controller is a Naze32 Acro. It runs the CleanFlight firmware, which is a fork of the BaseFlight firmware which is a port of the MultiWii firmware! The open nature of both the hardware and variety of firmwares gives plentiful options to modify and add functionality as desired. The CleanFlight configurator provides a powerful interface for configuring the control loops and flight behavior. The receiver control inputs can have a mapping applied to give logarithmic responses to linear input changes for instance, useful for having both fine control for manouvers and coarse control for avoiding obstacles or stunts. The PID loop algorithm and parameters can be adjusted in realtime even via a serial link. I did not buy the bluetooth bridge for that though.</p>
+
+<p>The transceiver I chose is the Taranis X9D Plus with an X4R receiver. The Taranis runs OpenTX firmware which also has a companion GUI for configuring profiles, both are open source and under active development. For now the configuration is simple, but does have one handy feature. I found that having 100% responsiveness was difficult to handle so Switch A now applies a 50%, 66% or 100% multiplier to all control outputs depending on its state.</p>
 ]]></content>
   </entry>
   
@@ -27,7 +57,20 @@
     <link href="http://dkozel.github.io/blog/pelco-pan-tilt-head/"/>
     <updated>2015-08-05T06:18:48-07:00</updated>
     <id>http://dkozel.github.io/blog/pelco-pan-tilt-head</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>For some time I’ve been working on a setup for receiving from, and eventually transmitting to, satellites and other moving aerial targets such as high altitude balloons. The initial design was based off of the work done by the <a href="https://satnogs.org/">SatNOGS</a> team, but ran into reliability issues when 3D printing a revised version of the helical antenna joints. Additionally the SatNOGS design is being iterated at the moment and their rotator design wasn’t complete. In searching for alternative elevation azimuth rotator designs a few options came up:</p>
+
+<ul>
+  <li>Build a SatNOGS style rotator from servos</li>
+  <li>Join two single axis satellite dish rotators</li>
+  <li>Use a manual pan tilt head such as the Quickset Herculese line</li>
+  <li>Buy a commercial two axis antenna rotator</li>
+</ul>
+
+<p>Each of these was a viable design with examples of working systems easy to find online. However given limited time and money non was a good match for me. Then another option came up, using a pan tilt head for CCTV cameras! These are built for a high duty cycle, heavy loads, remote operation, and long life spans. The trade off is that they are generally expensive, have odd power requirements, and often quite heavy. The control systems also come in a variety of physical styles and protocols. The nicest ones have RS 485 interfaces with well documented protocols.</p>
+
+<p>What I ended up with is a Pelco PT280-24P head with a MPT24DT controller which doubles as a power supply. The head’s motors run directly off of 24VAC lines coming from the controller which has a single interface, a joystick. The controller unfortunately runs off of 120VAC so I’m looking into buying a 12VDC to 24VAC boost inverter so I can run it either from an easily sourced wall brick or from batteries/solar while portable. The joystick interface should be simple to integrate with using some analog outputs. However there is no positioning feedback from the head so that’s another feature which will need to be added. I’m not sure if using one of the inexpensive accelerometer/gyro/magnetometer boards is overkill so will probably start with simple potentiometer based feedback. The PT280-24P/PP model includes this feedback as well as circuitry to move the camera to specific set points. Documentation online indicates that the internal hardware is missing so a simple breakout modification is not possible. Another option is to add a camera with a computer vision based feedback, but this is almost certainly adding complication for the sake of being fancy.</p>
+
+<p>The head and controller are in the mail now so I’ll start work on the system after returning from an upcoming conference.</p>
 ]]></content>
   </entry>
   

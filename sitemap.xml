@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://dkozel.github.io/blog/tunneling-web-traffic-over-ssh/</loc>
+    <lastmod>2015-08-13T06:24:25-07:00</lastmod>
+  </url>
+  <url>
     <loc>http://dkozel.github.io/blog/basic-quadcopter-build/</loc>
     <lastmod>2015-08-05T06:19:21-07:00</lastmod>
   </url>
@@ -21,10 +25,10 @@
     <lastmod>2014-07-08T17:37:26-07:00</lastmod>
   </url>
   <url>
-    <loc>http://dkozel.github.io/blog/archives/</loc>
+    <loc>http://dkozel.github.io/</loc>
   </url>
   <url>
-    <loc>http://dkozel.github.io/</loc>
+    <loc>http://dkozel.github.io/blog/archives/</loc>
   </url>
   <url>
     <loc>http://dkozel.github.io/about/</loc>
