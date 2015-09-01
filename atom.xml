@@ -4,7 +4,7 @@
   <title><![CDATA[Derek Kozel]]></title>
   <link href="http://dkozel.github.io/atom.xml" rel="self"/>
   <link href="http://dkozel.github.io/"/>
-  <updated>2015-08-13T08:55:04-07:00</updated>
+  <updated>2015-09-01T05:43:37-07:00</updated>
   <id>http://dkozel.github.io/</id>
   <author>
     <name><![CDATA[Derek Kozel]]></name>
@@ -24,7 +24,7 @@
 <div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 </pre></td><td class="code"><pre><code class=""><span class="line">ssh -C2nNqT -D 8080 dkozel@vps.derekkozel.com &amp;</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>These options:
+<p>These options:<br />
 * Enable compression
 * Force the use of SSH protocol version 2
 * Prevents reading of stdin, useful for running in the background
