@@ -13,12 +13,13 @@ At times it is useful to have your web traffic originate from a remote location 
 ssh -C2nNqT -D 8080 dkozel@vps.derekkozel.com &
 ```
 
-These options:  
-* Enable compression
-* Force the use of SSH protocol version 2
-* Prevents reading of stdin, useful for running in the background
-* Does not execute a remote command
-* Disables pseudo-tty allocation
-* Quiets ssh messages
+These options:
+
+ * Enable compression
+ * Force the use of SSH protocol version 2
+ * Prevents reading of stdin, useful for running in the background
+ * Does not execute a remote command
+ * Disables pseudo-tty allocation
+ * Quiets ssh messages
 
 Then configure your browser to use a localhost SOCKS proxy at port 8080.
