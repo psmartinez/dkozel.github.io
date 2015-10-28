@@ -99,7 +99,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 
 
-<time class='entry-date' datetime='2014-12-26T17:21:52+00:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>5:21 pm</span></time>
+<time class='entry-date' datetime='2014-12-26T09:21:52-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>9:21 am</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://dkozel.github.io">Comments</a>
@@ -129,7 +129,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <span class="line-number">5</span>
 </pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="k">if</span> <span class="o">[</span> ! -f /tmp/gpg-agent.env <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
 </span><span class="line">        killall gpg-agent<span class="p">;</span>
-</span><span class="line">        <span class="nb">eval</span> <span class="k">$(</span>gpg-agent --daemon --enable-ssh-support <span class="p">&amp;</span>gt<span class="p">;</span> /tmp/gpg-agent.env<span class="k">)</span><span class="p">;</span>
+</span><span class="line">        <span class="nb">eval</span> <span class="k">$(</span>gpg-agent --daemon --enable-ssh-support &gt; /tmp/gpg-agent.env<span class="k">)</span><span class="p">;</span>
 </span><span class="line"><span class="k">fi</span>
 </span><span class="line">. /tmp/gpg-agent.env
 </span></code></pre></td></tr></table></div></figure></notextile></div>
@@ -137,7 +137,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <p>This fixed the gpg-connect-agent IPC error allowing me to successfully run the reset commands on the card.</p>
 
 <div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nv">$ </span>gpg-connect-agent --hex <span class="p">&amp;</span>lt<span class="p">;</span> cardresetcommands
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nv">$ </span>gpg-connect-agent --hex &lt; cardresetcommands
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>cardresetcommands</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
@@ -191,8 +191,8 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <span class="line-number">4</span>
 <span class="line-number">5</span>
 <span class="line-number">6</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nv">$ </span>gpg2 --export-secret-keys <span class="o">{</span>KEYID<span class="o">}</span> <span class="p">&amp;</span>gt<span class="p">;</span> <span class="o">{</span>KEYID<span class="o">}</span>.private.key
-</span><span class="line"><span class="nv">$ </span>gpg2 --export <span class="o">{</span>KEYID<span class="o">}</span> <span class="p">&amp;</span>gt<span class="p">;</span> <span class="o">{</span>KEYID<span class="o">}</span> <span class="p">&amp;</span>gt<span class="p">;</span> <span class="o">{</span>KEYID<span class="o">}</span>.public.key
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nv">$ </span>gpg2 --export-secret-keys <span class="o">{</span>KEYID<span class="o">}</span> &gt; <span class="o">{</span>KEYID<span class="o">}</span>.private.key
+</span><span class="line"><span class="nv">$ </span>gpg2 --export <span class="o">{</span>KEYID<span class="o">}</span> <span class="p">&amp;</span>gt<span class="p">;</span> <span class="o">{</span>KEYID<span class="o">}</span> &gt; <span class="o">{</span>KEYID<span class="o">}</span>.public.key
 </span><span class="line"><span class="nv">$ </span><span class="nb">export </span><span class="nv">GNUPGHOME</span><span class="o">=</span>/mnt/gpg-key-backup/gnupghome
 </span><span class="line"><span class="nv">$ </span>gpg2 --allow-secret-key-import --import *.key
 </span><span class="line"><span class="nv">$ </span><span class="nb">unset </span>GNUPGHOME
@@ -215,10 +215,10 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 </span><span class="line"><span class="nv">$ </span>trimage -f dkozel_casual.jpg
 </span><span class="line"><span class="nv">$ </span>gpg2 --edit-key <span class="o">{</span>KEYID<span class="o">}</span>
 </span><span class="line">...
-</span><span class="line">gpg<span class="p">&amp;</span>gt<span class="p">;</span> addphoto
+</span><span class="line">gpg&gt; addphoto
 </span><span class="line">...
-</span><span class="line">gpg<span class="p">&amp;</span>gt<span class="p">;</span> showphoto
-</span><span class="line">gpg<span class="p">&amp;</span>gt<span class="p">;</span> save
+</span><span class="line">gpg&gt; showphoto
+</span><span class="line">gpg&gt; save
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <h3 id="further-references">Further References</h3>
@@ -244,7 +244,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 
 
-<time class='entry-date' datetime='2014-12-26T17:21:52+00:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>5:21 pm</span></time>
+<time class='entry-date' datetime='2014-12-26T09:21:52-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>9:21 am</span></time>
       
 
 
@@ -326,7 +326,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
   
 
 <script type="text/javascript">
-      var disqus_shortname = 'meditationsoncode';
+      var disqus_shortname = 'derekkozel';
       
         
         // var disqus_developer = 1;
