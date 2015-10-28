@@ -192,7 +192,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <span class="line-number">5</span>
 <span class="line-number">6</span>
 </pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nv">$ </span>gpg2 --export-secret-keys <span class="o">{</span>KEYID<span class="o">}</span> &gt; <span class="o">{</span>KEYID<span class="o">}</span>.private.key
-</span><span class="line"><span class="nv">$ </span>gpg2 --export <span class="o">{</span>KEYID<span class="o">}</span> <span class="p">&amp;</span>gt<span class="p">;</span> <span class="o">{</span>KEYID<span class="o">}</span> &gt; <span class="o">{</span>KEYID<span class="o">}</span>.public.key
+</span><span class="line"><span class="nv">$ </span>gpg2 --export <span class="o">{</span>KEYID<span class="o">}</span> &gt; <span class="o">{</span>KEYID<span class="o">}</span>.public.key
 </span><span class="line"><span class="nv">$ </span><span class="nb">export </span><span class="nv">GNUPGHOME</span><span class="o">=</span>/mnt/gpg-key-backup/gnupghome
 </span><span class="line"><span class="nv">$ </span>gpg2 --allow-secret-key-import --import *.key
 </span><span class="line"><span class="nv">$ </span><span class="nb">unset </span>GNUPGHOME
