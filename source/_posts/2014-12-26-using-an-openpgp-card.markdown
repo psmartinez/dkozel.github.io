@@ -22,7 +22,7 @@ Daniel at Ozone Solutions has a good post about the basic setup of using the Ope
 ``` bash .bash_local
 if [ ! -f /tmp/gpg-agent.env ]; then
         killall gpg-agent;
-        eval $(gpg-agent --daemon --enable-ssh-support &gt; /tmp/gpg-agent.env);
+        eval $(gpg-agent --daemon --enable-ssh-support > /tmp/gpg-agent.env);
 fi
 . /tmp/gpg-agent.env
 ```
@@ -30,7 +30,7 @@ fi
 This fixed the gpg-connect-agent IPC error allowing me to successfully run the reset commands on the card.
 
 ``` bash
-$ gpg-connect-agent --hex &lt; cardresetcommands
+$ gpg-connect-agent --hex < cardresetcommands
 ```
 
 ``` plain cardresetcommands
@@ -67,8 +67,8 @@ Don’t forget to backup your private key somewhere safe. Printed on paper is a 
 If you already have your key generated and wish to use the LUKS backup method, just follow Chris’ guide until you have created the backup volume then instead of generating a new key import your existing one. Then close the volume as Chris describes.
 
 ``` bash
-$ gpg2 --export-secret-keys {KEYID} &gt; {KEYID}.private.key
-$ gpg2 --export {KEYID} &gt; {KEYID} &gt; {KEYID}.public.key
+$ gpg2 --export-secret-keys {KEYID} > {KEYID}.private.key
+$ gpg2 --export {KEYID} &gt; {KEYID} > {KEYID}.public.key
 $ export GNUPGHOME=/mnt/gpg-key-backup/gnupghome
 $ gpg2 --allow-secret-key-import --import *.key
 $ unset GNUPGHOME
@@ -83,10 +83,10 @@ $ convert dkozel_casual.jpg -resize 240x288 dkozel_casual.jpg
 $ trimage -f dkozel_casual.jpg
 $ gpg2 --edit-key {KEYID}
 ...
-gpg&gt; addphoto
+gpg> addphoto
 ...
-gpg&gt; showphoto
-gpg&gt; save
+gpg> showphoto
+gpg> save
 ```
 
 ### Further References
