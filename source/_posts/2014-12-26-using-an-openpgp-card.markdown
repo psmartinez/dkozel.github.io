@@ -68,7 +68,7 @@ If you already have your key generated and wish to use the LUKS backup method, j
 
 ``` bash
 $ gpg2 --export-secret-keys {KEYID} > {KEYID}.private.key
-$ gpg2 --export {KEYID} &gt; {KEYID} > {KEYID}.public.key
+$ gpg2 --export {KEYID} > {KEYID}.public.key
 $ export GNUPGHOME=/mnt/gpg-key-backup/gnupghome
 $ gpg2 --allow-secret-key-import --import *.key
 $ unset GNUPGHOME
