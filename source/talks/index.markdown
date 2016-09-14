@@ -6,6 +6,11 @@ sharing: false
 footer: true
 ---
 
+**Introduction to Synchronization**  
+_GNU Radio Conference_  
+September 12, 2016 - Boulder, CO  
+[Slides](/talks/GRCon16_Introduction_to_Synchronization.pdf)
+
 **Optimization of Digital Modulation Schemes using Evolutionary Algorithms**  
 _GNU Radio Conference_  
 August 27, 2015 - Washington, DC  
