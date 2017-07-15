@@ -6,6 +6,11 @@ sharing: false
 footer: true
 ---
 
+**Hardware Accelerated Software Defined Radio**  
+_HAM RADIO_  
+July 15, 2017 - Friedrichshafen, Germany  
+[Slides](/talks/HAMRADIO17_Hardware_Accelerated_SDR.pdf)
+
 **Introduction to Synchronization**  
 _GNU Radio Conference_  
 September 12, 2016 - Boulder, CO  
