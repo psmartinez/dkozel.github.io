@@ -10,11 +10,13 @@ footer: true
 _HAM RADIO_  
 July 15, 2017 - Friedrichshafen, Germany  
 [Slides](/talks/HAMRADIO17_Hardware_Accelerated_SDR.pdf)
+[Video](https://www.youtube.com/watch?v=-ujuetYB_58)
 
 **Introduction to Synchronization**  
 _GNU Radio Conference_  
 September 12, 2016 - Boulder, CO  
 [Slides](/talks/GRCon16_Introduction_to_Synchronization.pdf)
+[Video](https://www.youtube.com/watch?v=FxciG7nW-J0)
 
 **Optimization of Digital Modulation Schemes using Evolutionary Algorithms**  
 _GNU Radio Conference_  
