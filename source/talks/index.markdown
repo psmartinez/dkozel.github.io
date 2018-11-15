@@ -6,6 +6,11 @@ sharing: false
 footer: true
 ---
 
+**SDR and DSP with GNU Radio**  
+_Cardiff University_  
+November 7, 2018 - Cardiff, Wales  
+[Slides](/talks/Cardiff_SDR_and_DSP_with_GNU_Radio.pdf)
+
 **Hardware Accelerated Software Defined Radio**  
 _HAM RADIO_  
 July 15, 2017 - Friedrichshafen, Germany  
