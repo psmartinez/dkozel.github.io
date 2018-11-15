@@ -4,7 +4,7 @@
   <title><![CDATA[Derek Kozel]]></title>
   <link href="http://dkozel.github.io/atom.xml" rel="self"/>
   <link href="http://dkozel.github.io/"/>
-  <updated>2017-12-08T10:21:13-08:00</updated>
+  <updated>2018-11-15T17:59:06+00:00</updated>
   <id>http://dkozel.github.io/</id>
   <author>
     <name><![CDATA[Derek Kozel]]></name>
@@ -16,9 +16,11 @@
   <entry>
     <title type="html"><![CDATA[Assembling the Big Dish]]></title>
     <link href="http://dkozel.github.io/blog/assembling-the-big-dish/"/>
-    <updated>2017-03-28T22:40:38-07:00</updated>
+    <updated>2017-03-29T06:40:38+01:00</updated>
     <id>http://dkozel.github.io/blog/assembling-the-big-dish</id>
-    <content type="html"><![CDATA[<p>This weekend myself and a coworker lifted the panels of the big dish into place.
+    <content type="html"><![CDATA[<p>I’ve wanted for some time to get involved in radio astronomy and Amateur Radio EME operating. The most significant blocker for either of these activities is having an antenna with enough gain to be able to receive very weak signals and the ability to point it easily and accurately.</p>
+
+<p>This weekend myself and a coworker lifted the panels of the big dish into place.
 <img src="media/big_dish_partially_assembled.JPG" alt="" /></p>
 
 <p>Unfortunately the weight of the dish and angle of the mount means that there was a gap between the final panels.
@@ -36,7 +38,7 @@
   <entry>
     <title type="html"><![CDATA[Tunneling Web Traffic Over SSH]]></title>
     <link href="http://dkozel.github.io/blog/tunneling-web-traffic-over-ssh/"/>
-    <updated>2015-08-13T06:24:25-07:00</updated>
+    <updated>2015-08-13T14:24:25+01:00</updated>
     <id>http://dkozel.github.io/blog/tunneling-web-traffic-over-ssh</id>
     <content type="html"><![CDATA[<p>At times it is useful to have your web traffic originate from a remote location for testing or access to geofenced resources. During university it was very useful for accessing the library resources. At other times being able to have all traffic encrypted from a laptop to a remote location such as when on an unsecured WiFi network. I’ve used this a good number of times so here is the minimal steps.
 <!-- more --></p>
@@ -62,7 +64,7 @@
   <entry>
     <title type="html"><![CDATA[Basic Quadcopter Build]]></title>
     <link href="http://dkozel.github.io/blog/basic-quadcopter-build/"/>
-    <updated>2015-08-05T06:19:21-07:00</updated>
+    <updated>2015-08-05T14:19:21+01:00</updated>
     <id>http://dkozel.github.io/blog/basic-quadcopter-build</id>
     <content type="html"><![CDATA[<p>A long term desire of mine has been to build a multicopter. Three years ago I tried flying a model powered glider and it went like a stone in a pool. In hindsight a glider is very good at catching any breeze so was a poor choice for a beginner as it was pushed far away before I could get a grip on controlling it. a few trees and almost a window later it was put in a closet then given to Goodwill. A multicopter has a much shorter flight time, but far lower wind load and can be held stationary with little effort even without fancy additions like GPS.
 <!-- more --></p>
@@ -80,7 +82,7 @@
   <entry>
     <title type="html"><![CDATA[Pelco Pan Tilt Head]]></title>
     <link href="http://dkozel.github.io/blog/pelco-pan-tilt-head/"/>
-    <updated>2015-08-05T06:18:48-07:00</updated>
+    <updated>2015-08-05T14:18:48+01:00</updated>
     <id>http://dkozel.github.io/blog/pelco-pan-tilt-head</id>
     <content type="html"><![CDATA[<p>For some time I’ve been working on a setup for receiving from, and eventually transmitting to, satellites and other moving aerial targets such as high altitude balloons. The initial design was based off of the work done by the <a href="https://satnogs.org/">SatNOGS</a> team, but ran into reliability issues when 3D printing a revised version of the helical antenna joints. Additionally the SatNOGS design is being iterated at the moment and their rotator design wasn’t complete. In searching for alternative elevation azimuth rotator designs a few options came up:</p>
 
@@ -103,7 +105,7 @@
   <entry>
     <title type="html"><![CDATA[Using an OpenPGP Card]]></title>
     <link href="http://dkozel.github.io/blog/using-an-openpgp-card/"/>
-    <updated>2014-12-26T09:21:52-08:00</updated>
+    <updated>2014-12-26T17:21:52+00:00</updated>
     <id>http://dkozel.github.io/blog/using-an-openpgp-card</id>
     <content type="html"><![CDATA[<p>I bought an <a href="http://g10code.com/p-card.html">OpenPGP card</a> earlier this year and created a new GPG key (<a href="http://www.derekkozel.com/2642D337.asc">2642D337</a>) during IETF 89. I’ve been using that key to sign git commits, ssh, and sign/encrypt significant emails and files. However I locked the card on purpose while experimenting with it and then encountered problems unlocking and reloading it. Since then the card has been taking up space in my wallet. Yesterday I was lounging and decided to look at my GPG setup and get the card working.</p>
 
@@ -231,7 +233,7 @@
   <entry>
     <title type="html"><![CDATA[Latex in Octopress]]></title>
     <link href="http://dkozel.github.io/blog/latex-in-octopress/"/>
-    <updated>2014-07-08T18:21:23-07:00</updated>
+    <updated>2014-07-09T02:21:23+01:00</updated>
     <id>http://dkozel.github.io/blog/latex-in-octopress</id>
     <content type="html"><![CDATA[<p>Many of the topics I work with involve math left, right, and center. Being able to use <script type="math/tex">\LaTeX</script> is a big feature for me so here’s the solution I’ve come up with so far. Credit certainly goes to  <a href="http://drz.ac/2013/01/03/blogging-with-math/">Dr Zac</a> and <a href="http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/">Felix</a> for their work getting Latex playing nice. I believe that Zac’s is the more correct solution given its use of the custom header file rather than modifying the default layout. However Felix has the fix for a bug in MathJax which otherwise turns the entire page white when viewing an equation’s source.
 <!--more--></p>
@@ -285,7 +287,7 @@
   <entry>
     <title type="html"><![CDATA[Project Bankruptcy]]></title>
     <link href="http://dkozel.github.io/blog/project-bankruptcy/"/>
-    <updated>2014-07-08T17:37:26-07:00</updated>
+    <updated>2014-07-09T01:37:26+01:00</updated>
     <id>http://dkozel.github.io/blog/project-bankruptcy</id>
     <content type="html"><![CDATA[<p>Most engineers, and probably most people in general, will be familiar with how projects and tasks accumulate. Finishing university and moving three times in two months has pushed my todo list past the end of the page. I sat down today and wrote down everything I could think of that I wished, or was obliged, to accomplish in the next month and have to admit that some (many) of the project ideas that float through my head simply aren’t going to get done.
 <!--more--></p>
